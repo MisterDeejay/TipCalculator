@@ -44,6 +44,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         checkForAndSetSavedCurrencySym()
+        billField.becomeFirstResponder()
     }
 
     // onTap closes the keyboard when the user taps anywhere on the
