@@ -90,10 +90,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="billField" destination="gGk-NX-vKL" id="7Un-ur-QdS"/>
+                        <outlet property="billFieldLabel" destination="4vb-pA-34G" id="CxF-bn-Hic"/>
                         <outlet property="tipCalcView" destination="8bC-Xf-vdC" id="tfk-c1-xd3"/>
                         <outlet property="tipLabel" destination="3q5-7p-dTN" id="A9l-mV-khY"/>
+                        <outlet property="tipLabelText" destination="J43-cx-YeM" id="JXx-tW-FYD"/>
                         <outlet property="tipSelector" destination="hZY-U2-HHA" id="8E3-hm-ZHS"/>
                         <outlet property="totalLabel" destination="CaN-4O-PZ3" id="NPZ-BJ-xmq"/>
+                        <outlet property="totalLabelText" destination="mrF-8d-Hcp" id="cj1-SX-bVz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -104,6 +107,41 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="506" y="319"/>
+        </scene>
+        <!--Set Color Theme View Controller-->
+        <scene sceneID="mhD-fC-U9b">
+            <objects>
+                <viewController id="ajT-JQ-RPn" customClass="SetColorThemeViewController" customModule="tippr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kz0-Wi-yJg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invert Color Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gfB-jo-SHn">
+                                <rect key="frame" x="20" y="118" width="147" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="L10-Wc-cbX">
+                                <rect key="frame" x="251" y="113" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="setInvertedColorTheme:" destination="ajT-JQ-RPn" eventType="valueChanged" id="bNs-Kb-LAx"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="P7D-4x-hxP"/>
+                    <connections>
+                        <outlet property="invertColorThemeSwitch" destination="L10-Wc-cbX" id="o7d-Dh-xe8"/>
+                        <outlet property="switchLabel" destination="gfB-jo-SHn" id="kW1-dp-uaU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p18-ve-APq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="927" y="-377"/>
         </scene>
         <!--Settings-->
         <scene sceneID="OdE-la-OPA">
@@ -117,11 +155,11 @@
                                 <rect key="frame" x="0.0" y="134" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eFl-DI-afR" id="CVq-Tc-GEH">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6lJ-ZQ-uz7">
-                                            <rect key="frame" x="0.0" y="0.5" width="320" height="44.5"/>
+                                            <rect key="frame" x="0.0" y="1" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <connections>
                                                 <segue destination="U4d-ny-UIw" kind="push" id="FZV-rZ-HVi"/>
@@ -141,11 +179,11 @@
                                 <rect key="frame" x="0.0" y="90" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="845-GW-jvt" id="nMn-RM-mS6">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="U6s-kM-yCL">
-                                            <rect key="frame" x="0.0" y="-0.5" width="321" height="44.5"/>
+                                            <rect key="frame" x="0.0" y="-1" width="321" height="45"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <connections>
                                                 <segue destination="2U1-xZ-FgJ" kind="push" id="BlJ-LA-EwK"/>
@@ -160,10 +198,41 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Ycp-Wj-hCv">
+                                <rect key="frame" x="0.0" y="178" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ycp-Wj-hCv" id="45J-Uf-ck0">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Gph-j6-07g">
+                                            <rect key="frame" x="0.0" y="-1" width="321" height="45"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <segue destination="ajT-JQ-RPn" kind="push" id="xKI-v7-hLX"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Color Theme" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TKs-3E-i3u">
+                                            <rect key="frame" x="15" y="11" width="129" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="qqQ-d4-nVX"/>
+                    <connections>
+                        <outlet property="cell1" destination="Ycp-Wj-hCv" id="m28-rw-nJU"/>
+                        <outlet property="cell2" destination="eFl-DI-afR" id="jEn-5n-98V"/>
+                        <outlet property="cell3" destination="845-GW-jvt" id="hYH-8T-Zdi"/>
+                        <outlet property="label1" destination="TEu-OP-NrC" id="4IS-tz-r1g"/>
+                        <outlet property="label2" destination="7Wr-x2-8dy" id="q6e-Ll-6LV"/>
+                        <outlet property="label3" destination="TKs-3E-i3u" id="Lln-rV-y5D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Q7-fL-xKo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -218,7 +287,7 @@
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Default Tip" id="jwf-x9-1vl"/>
                     <connections>

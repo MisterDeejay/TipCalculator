@@ -17,6 +17,7 @@
 		4E187C731D948CDE00B752FE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E187C721D948CDE00B752FE /* SettingsViewController.swift */; };
 		4E64000A1D94EC4900310DF9 /* DefaultTipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6400091D94EC4900310DF9 /* DefaultTipViewController.swift */; };
 		4E64000C1D94F39E00310DF9 /* SetLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E64000B1D94F39E00310DF9 /* SetLanguageViewController.swift */; };
+		4E64000E1D95341A00310DF9 /* SetColorThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E64000D1D95341A00310DF9 /* SetColorThemeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		4E187C721D948CDE00B752FE /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4E6400091D94EC4900310DF9 /* DefaultTipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultTipViewController.swift; path = ../DefaultTipViewController.swift; sourceTree = "<group>"; };
 		4E64000B1D94F39E00310DF9 /* SetLanguageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetLanguageViewController.swift; sourceTree = "<group>"; };
+		4E64000D1D95341A00310DF9 /* SetColorThemeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetColorThemeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		4E187C381D94885C00B752FE = {
 			isa = PBXGroup;
 			children = (
+				4E64000D1D95341A00310DF9 /* SetColorThemeViewController.swift */,
 				4E187C431D94885C00B752FE /* tippr */,
 				4E187C581D94885C00B752FE /* tipprTests */,
 				4E187C631D94885C00B752FE /* tipprUITests */,
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E187C471D94885C00B752FE /* ViewController.swift in Sources */,
+				4E64000E1D95341A00310DF9 /* SetColorThemeViewController.swift in Sources */,
 				4E187C451D94885C00B752FE /* AppDelegate.swift in Sources */,
 				4E64000C1D94F39E00310DF9 /* SetLanguageViewController.swift in Sources */,
 				4E64000A1D94EC4900310DF9 /* DefaultTipViewController.swift in Sources */,

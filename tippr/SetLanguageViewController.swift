@@ -13,6 +13,8 @@ class SetLanguageViewController: UIViewController, UIPickerViewDataSource, UIPic
     @IBOutlet weak var countryPicker: UIPickerView!
     
     let currencyKeyConstant = "currencyKey"
+    let inverseColorTheme = "inverseTheme"
+    var textColor = UIColor.darkTextColor()
     
     var pickerData = ["","Dollar","Euro","Yen","Sterling","Yuan","Won","Lira","Rupee","Real"]
     
@@ -20,6 +22,19 @@ class SetLanguageViewController: UIViewController, UIPickerViewDataSource, UIPic
         super.viewDidLoad()
         self.countryPicker.dataSource = self
         self.countryPicker.delegate = self
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if (defaults.boolForKey(inverseColorTheme)) {
+            self.view.backgroundColor = UIColor.darkGrayColor()
+            countryPicker.tintColor = UIColor.lightTextColor()
+            textColor = UIColor.lightTextColor()
+        } else {
+            self.view.backgroundColor = UIColor.whiteColor()
+            countryPicker.tintColor = UIColor.darkTextColor()
+            textColor = UIColor.darkTextColor()
+        }
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -32,6 +47,11 @@ class SetLanguageViewController: UIViewController, UIPickerViewDataSource, UIPic
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let string = pickerData[row]
+        return NSAttributedString(string: string, attributes: [NSForegroundColorAttributeName:textColor])
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

@@ -14,11 +14,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipSelector: UISegmentedControl!
     @IBOutlet weak var tipCalcView: UIView!
+    @IBOutlet weak var totalLabelText: UILabel!
+    @IBOutlet weak var billFieldLabel: UILabel!
+    @IBOutlet weak var tipLabelText: UILabel!
     
     let defaultTipKeyConstant = "defaultTip"
     let billKeyConstant = "bill"
     let dateBillSavedKeyConstant = "savedAt"
     let currencyKeyConstant = "currencyKey"
+    let inverseColorTheme = "inverseTheme"
+    
+    /* viewDidLoad callback will set the invertedColorTheme boolean
+     to false if the app is loading for the first time */
+    override func viewDidLoad() {
+        let defaults = getDefaults()
+        defaults.setBool(false, forKey: inverseColorTheme)
+    }
     
     // viewWillAppear callback is used to customize the animation
     // when the TipCalculator screen appears, sets the tip percentage to the 
@@ -40,6 +51,7 @@ class ViewController: UIViewController {
         }
         
         calculateTip(self)
+        checkToInvertColorTheme()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -129,6 +141,32 @@ class ViewController: UIViewController {
             let lang = fetchLocaleLang()
             let localeCurrencySym = convertLangToCurrency(lang)
             setCurrencySym(localeCurrencySym)
+        }
+    }
+    
+    private func checkToInvertColorTheme() {
+        let defaults = getDefaults()
+        print(defaults.boolForKey(inverseColorTheme))
+        if(defaults.boolForKey(inverseColorTheme)) {
+            self.view.backgroundColor = UIColor.darkGrayColor()
+            tipLabel.textColor = UIColor.lightTextColor()
+            billField.textColor = UIColor.lightTextColor()
+            totalLabel.textColor = UIColor.lightTextColor()
+            tipLabelText.textColor = UIColor.lightTextColor()
+            billFieldLabel.textColor = UIColor.lightTextColor()
+            totalLabelText.textColor = UIColor.lightTextColor()
+            billField.backgroundColor = UIColor.blackColor()
+            tipSelector.tintColor = UIColor.yellowColor()
+        } else {
+            tipLabel.textColor = UIColor.darkTextColor()
+            billField.textColor = UIColor.darkTextColor()
+            totalLabel.textColor = UIColor.darkTextColor()
+            tipLabelText.textColor = UIColor.darkTextColor()
+            billFieldLabel.textColor = UIColor.darkTextColor()
+            totalLabelText.textColor = UIColor.darkTextColor()
+            billField.backgroundColor = UIColor.whiteColor()
+            tipSelector.tintColor = UIColor.blueColor()
+            self.view.backgroundColor = UIColor.whiteColor()
         }
     }
     
