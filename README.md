@@ -32,6 +32,8 @@ Here's a walkthrough of implemented user stories:
 
 <img src='http://i.imgur.com/SWu4V4f.gif' title='Tippr Demo' width='' alt='Tippr Demo' />
 
+<img src='http://i.imgur.com/RwVIhWx.gif' title='Tippr Demo' width='' alt='Tippr Demo' />
+
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
